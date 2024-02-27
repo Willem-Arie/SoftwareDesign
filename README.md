@@ -1,48 +1,87 @@
-# Wiki voor Software Ontwerp Project
-## Project Overzicht
-Dit project voor softwareontwerp is gemaakt door Willem-Arie en Ricardo. We hebben een systeem gebouwd met design patterns, zodat het makkelijker is de code te schrijven en te onderhouden.
+# Number Guessing Game
+## Korte Beschrijving
+Voor de opdracht van software design hebben we gekozen om een gokspelletje te maken in Java. In dit spel moet de speler een nummer raden wat door de computer gegenereerd wordt. In deze opdracht moesten we verschillende design patterns gebruiken. Die staan hieronder op een rijtje. Deze zorgen voor extra structuur en flexibiliteit.
 
-## Microservices Verdeling
-Onze microservices zijn als volgt verdeeld:
+## Gebruikte Design Patterns
+### Creational patterns:
+## 1. Singleton Pattern
 
-## Bijdragen van Willem-Arie:
-### Builder Pattern
-Bouwt complexe dingen stap voor stap.
-### Strategy Pattern
-Gebruikt verschillende manieren om taken uit te voeren.
-### Proxy Pattern
-Werkt als een soort tussenpersoon om toegang tot dingen te controleren.
-## Bijdragen van Ricardo:
-### Singleton Pattern
-Zorgt ervoor dat er maar één exemplaar van iets is.
-### Observer Pattern
-Zorgt ervoor dat als iets verandert, andere dingen dat meteen weten.
-### Decorator Pattern
-Voegt extra functies toe aan dingen zonder ze te verwarren.
-## Gebruikte Ontwerppatronen
-### 1. Builder Pattern
-Beschrijving:
-Het Builder Pattern wordt gebruikt in de "Builder Pattern Microservice" om ingewikkelde dingen stap voor stap te bouwen.
+### Bestanden:
 
-### 2. Strategy Pattern
-Beschrijving:
-De "Strategy Pattern Microservice" gebruikt het Strategy Pattern, waarmee we dingen op verschillende manieren kunnen doen.
+- GameManager.java
 
-### 3. Proxy Pattern
-Beschrijving:
-De "Proxy Pattern Microservice" doet alsof hij iets anders is om te controleren wie er toegang heeft.
+### Uitleg:
 
-### 4. Singleton Pattern
-Beschrijving:
-De "Singleton Pattern Microservice" zorgt ervoor dat we maar één exemplaar van iets hebben, zodat het niet in de war raakt.
+Het Singleton pattern wordt gebruikt om ervoor te zorgen dat er slechts één instantie van GameManager is, waardoor het spel altijd toegankelijk is.
 
-### 5. Observer Pattern
-Beschrijving:
-De "Observer Pattern Microservice" zorgt ervoor dat als iets verandert, andere dingen daarvan weten en zichzelf kunnen bijwerken.
+## 2. Builder Pattern
 
-### 6. Decorator Pattern
-Beschrijving:
-De "Decorator Pattern Microservice" voegt extra functies toe aan dingen zonder alles in de war te schoppen.
+### Bestanden:
 
-## Conclusie
-Door deze ontwerppatronen te gebruiken, is ons systeem makkelijker te begrijpen en aan te passen. Samenwerken tussen Willem-Arie en Ricardo heeft geleid tot een goed ontworpen systeem dat gebruikmaakt van handige manieren van programmeren.
+- GameConfig.java
+
+- GameConfigBuilder.java
+
+### Uitleg:
+
+Het Builder pattern wordt gebruikt om GameConfig objecten te bouwen met bijbehorende parameters, waardoor configuratie flexibel en leesbaar blijft.
+
+### Behavioral patterns:
+
+## 3. Observer Pattern
+
+### Bestanden:
+
+- Observer.java
+
+- Player.java
+
+- NumberGenerator.java
+
+### Uitleg:
+
+Het Observer pattern zorgt ervoor dat Player objecten in staat om wijzigingen in NumberGenerator te volgen en automatisch bijgewerkt te worden wanneer een nieuw getal wordt gegenereerd.
+
+## 4. Strategy Pattern
+
+### Bestanden:
+
+- GuessingStrategy.java
+
+- HumanGuessingStrategy.java
+
+- RandomGuessingStrategy.java
+
+### Uitleg:
+
+Het Strategy pattern definieert verschillende gokstrategieën die dynamisch kunnen worden uitgewisseld, waardoor het spel flexibel en uitbreidbaar blijft.
+
+### Structural patterns:
+
+## 5. Decorator Pattern
+
+### Bestanden:
+
+- GameDecorator.java
+
+- ScoreboardDecorator.java
+
+### Uitleg:
+
+Het Decorator pattern wordt gebruikt om extra functionaliteit zoals een scoreboard dynamisch toe te voegen aan het spel zonder de functionaliteit te wijzigen.
+
+## 6. Proxy Pattern
+
+### Bestanden:
+
+- NumberGuessingGameProxy.java
+
+### Uitleg:
+
+Het Proxy pattern wordt gebruikt om extra gedrag toe te voegen (in dit geval, controle op gebruikersreferenties) voordat het echte spel wordt aangeroepen.
+
+## Samenwerking
+
+De samenwerking verliep vlot. We hadde vanaf het begin helder wat we wilden gaan maken. We zijn toen gaan kijken welke design patterns binnen die idee pasten. Na een keuze gemaakt te hebben, hebben we deze patterns eerlijk verdeeld, waarbij Ricardo verantwoordelijk was voor de implementatie van de Builder, Strategy en Proxy patterns, terwijl Willem-Arie zich bezighield met de Singleton en de Observer en Decorator patterns.
+
+Gemaakt door: Ricardo Leite Lopez & Willem-Arie Goudzwaard Github: https://github.com/Willem-Arie/SoftwareDesign
