@@ -1,6 +1,6 @@
 # Number Guessing Game
 ## Korte Beschrijving
-Voor de opdracht van software design hebben we gekozen om een gokspelletje te maken in Java. In dit spel moet de speler een nummer raden wat door de computer gegenereerd wordt. In deze opdracht moesten we verschillende design patterns gebruiken. Die staan hieronder op een rijtje. Deze zorgen voor extra structuur en flexibiliteit.
+Voor de opdracht van software design hebben we gekozen om een gokspelletje te maken in Java. In dit spel moet de speler een nummer raden wat door de computer gegenereerd wordt. Vervolgens waagt de computer ook nog een gok. Er wordt vervolgens gekeken welke van de twee het dichtste bij het gekozen getal zit. In deze opdracht moesten we verschillende design patterns gebruiken. Die staan hieronder op een rijtje. Deze zorgen voor extra structuur en flexibiliteit.
 
 ## Gebruikte Design Patterns
 ### Creational patterns:
@@ -40,7 +40,7 @@ Het Builder pattern wordt gebruikt om GameConfig objecten te bouwen met bijbehor
 
 ### Uitleg:
 
-Het Observer pattern zorgt ervoor dat Player objecten in staat om wijzigingen in NumberGenerator te volgen en automatisch bijgewerkt te worden wanneer een nieuw getal wordt gegenereerd.
+Het Observer pattern zorgt ervoor dat Player objecten in staat zijn om wijzigingen in NumberGenerator te volgen en automatisch bijgewerkt te worden wanneer een nieuw getal wordt gegenereerd.
 
 ## 4. Strategy Pattern
 
@@ -82,6 +82,6 @@ Het Proxy pattern wordt gebruikt om extra gedrag toe te voegen (in dit geval, co
 
 ## Samenwerking
 
-De samenwerking verliep vlot. We hadde vanaf het begin helder wat we wilden gaan maken. We zijn toen gaan kijken welke design patterns binnen die idee pasten. Na een keuze gemaakt te hebben, hebben we deze patterns eerlijk verdeeld, waarbij Ricardo verantwoordelijk was voor de implementatie van de Builder, Strategy en Proxy patterns, terwijl Willem-Arie zich bezighield met de Singleton en de Observer en Decorator patterns.
+De samenwerking verliep vlot. We hadden vanaf het begin helder wat we wilden gaan maken. We zijn toen gaan kijken welke design patterns binnen dit idee pasten. Na een keuze gemaakt te hebben, hebben we deze patterns eerlijk verdeeld, waarbij Ricardo verantwoordelijk was voor de implementatie van de Builder, Strategy en Proxy patterns, terwijl Willem-Arie zich bezighield met de Singleton, Observer en Decorator patterns.
 
-Gemaakt door: Ricardo Leite Lopez & Willem-Arie Goudzwaard Github: https://github.com/Willem-Arie/SoftwareDesign
+Gemaakt door: Ricardo Leite Lopes & Willem-Arie Goudzwaard Github: https://github.com/Willem-Arie/SoftwareDesign
